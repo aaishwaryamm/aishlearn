@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>WEB</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="script.js"></script>
+
+
+    
+</head>
+<body>
+
+
+
+    <script>
+
+        let connectButton;
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          connectButton = document.getElementById('connect-button');
+          connectButton.addEventListener('click', event => {
+            let account;
+            let button = event.target;
+            ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+              account = accounts[0];
+              console.log(account);
+              button.textContent = account;
+      
+              ethereum.request({method: 'eth_getBalance' , params: [account, 'latest']}).then(result => {
+                console.log(result);
+                let wei = parseInt(result,16);
+                let balance = wei / (10**18);
+                console.log(balance + " ETH");
+              });
+            });
+          });
+        });
+      
+      </script>
+
+   
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="new.html">About</a></li>
+
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Learn <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-content">
+                        <a href="#">Blockchain</a>
+                        <a href="#">DeFi</a>
+                        <a href="#">Smart Contract</a>
+                    </div>
+                  
+                </div>
+            </ul>
+            <button id="connect-button">Connect Metamask</button>
+        </div>
+    </div>
+
+   
+    <div class="scrolld">
+        <img src="S1.jpg">
+      </div>
+    <div class="animation">
+        <img src="ss.jpg">
+    </div>
+    <div class="animation">
+        <img src="s.jpg">
+     </div>
+     <div class="footer">
+       
+     </div>
+      </div>
+     
+</body>
+</html>

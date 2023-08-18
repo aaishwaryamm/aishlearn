@@ -1,0 +1,306 @@
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+}
+
+
+*{
+      margin: 0;
+      padding: 0;
+      font-family: 'nexa';
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url("aishwaryamSS.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Adjusted to align items to the left */
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 130px; /* Adjusted margin to create spacing between items */
+    position: relative;
+}
+.navbar ul li a{
+       text-decoration: none;
+       color: #080808;
+       text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f86f6f;
+    position: absolute;
+    left: 0;
+    bottom: -10;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:73%;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #181818;
+  font-family: 'Nexa';
+  font-weight: lighter;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fa3c65;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transform-origin: top;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 8px; /* Add curved edges */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover .dropdown-content a:hover {
+  background-color: #272727;
+}
+
+.dropdown:hover .dropbtn i {
+  transform: rotate(180deg);
+}
+
+.dropdown .dropbtn i {
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+  
+.content {
+    width: 100%;
+    font-family: 'nexa';
+    position: absolute;
+    text-align: center;
+    bottom: 120px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #292929;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 1s ease-out;
+}
+
+button:hover span {
+    width: 100%;
+    z-index: -1;
+}
+
+button:hover {
+    border: none;
+    z-index: 1;
+}
+/* ... Your previous CSS code ... */
+
+.scrolld {
+  /* Set the container height to cover the entire viewport */
+  height: 100vh;
+  /* Remove the overflow-y property to avoid separate scrolling */
+  overflow-y: hidden;
+  /* Remove padding to utilize more space for the image */
+  padding: 0; /* Remove the padding to maximize space for the image */
+  position: relative; /* Add position: relative to enable absolute positioning for the ::after element */
+}
+
+.scrolld img {
+  /* Set the maximum width of the images to fit within the container */
+  width: 100%;
+  height: auto;
+}
+
+.scrolld::after {
+  content: "Explore";
+  position: absolute;
+  top: 50%; /* Position the element at the vertical center of the container */
+  left: 50px; /* Adjust the distance from the left side as needed */
+  transform: translateY(-50%); /* Center the element vertically */
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #5c5c5c; /* Adjust the text color as needed */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 10px; /* Adjust the padding as needed */
+  border: 2px solid #333333; /* Adjust the border properties as needed */
+  border-radius: 5px; /* Adjust the border radius as needed */
+  cursor: pointer;
+}
+
+.scrolld:hover::after {
+  opacity: 1;
+}
+
+.scrolld:active::after {
+  transform: translateY(-50%) scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+
+/* ... Your remaining CSS code ... */
+
+
+/* CSS for the animation divs */
+.animation img {
+  max-width: 100%;
+  height: auto; /* Maintain the aspect ratio */
+}
+.animation {
+  /* Adjust the container width as needed */
+  width: 100%;
+  /* Add spacing between the animation divs if necessary */
+  margin-top: 20px;
+}
+
+
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.experience-button {
+  background: linear-gradient(to right, #fd6a6a, #d4d4d4);
+  color: #292929;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-size: 200% auto;
+  background-position: 0 50%;
+  transition: background-position 0.5s, transform 0.3s;
+}
+
+.experience-button:hover {
+  background-position: 100% 50%;
+}
+
+.experience-button:active {
+  background-color: #000;
+  transform: scale(0.95);
+}
+
+.soon {
+  margin: 0;
+  padding: 0;
+  background-image: url("sw.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.soon {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url("sw.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.home-button {
+  position: absolute;
+  top: 10px;
+  right: 30px; /* Adjust the value here to move the button slightly to the left */
+  background-color: #141414;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url("footer.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50px; /* Adjust this value to crop more or less from the bottom */
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
+
+
+
